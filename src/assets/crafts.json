@@ -1,0 +1,123 @@
+{
+    "wooden_furniture_sculptures": [
+      {
+        "name": "TimberCraft Creations",
+        "description": "Handcrafted wooden furniture and sculptures, blending elegance with natural beauty. Perfect for enhancing any living space. Price: $600. Rating: 4.8/5",
+        "price": "$600",
+        "rating": "4.8/5"
+      },
+      {
+        "name": "Nature's Grain Furniture",
+        "description": "Organically sourced wooden furniture inspired by nature's patterns and textures. Each piece is unique. Price: $400. Rating: 4.6/5",
+        "price": "$400",
+        "rating": "4.6/5"
+      },
+      {
+        "name": "Carved Haven Sculptures",
+        "description": "Exquisite wooden sculptures intricately carved to add a touch of sophistication to any space. Price: $300. Rating: 4.9/5",
+        "price": "$300",
+        "rating": "4.9/5"
+      }
+    ],
+    "wooden_home_decor": [
+      {
+        "name": "TimberTrove Home Accents",
+        "description": "Charming wooden home decor pieces to infuse warmth and character into your living environment. Price: $80. Rating: 4.7/5",
+        "price": "$80",
+        "rating": "4.7/5"
+      },
+      {
+        "name": "Rustic Roots Decor",
+        "description": "Rustic-inspired wooden decor items that bring a touch of countryside charm to your home. Price: $50. Rating: 4.5/5",
+        "price": "$150",
+        "rating": "4.5/5"
+      },
+      {
+        "name": "Earthy Elegance Homeware",
+        "description": "Elegant wooden homeware designed to seamlessly blend style and functionality in your living space. Price: $100. Rating: 4.8/5",
+        "price": "$100",
+        "rating": "4.8/5"
+      }
+    ],
+    "wooden_utensils_kitchenware": [
+      {
+        "name": "TimberChef Kitchen Tools",
+        "description": "Durable and eco-friendly wooden kitchen utensils for a sustainable culinary experience. Price: $30. Rating: 4.6/5",
+        "price": "$30",
+        "rating": "4.6/5"
+      },
+      {
+        "name": "EcoWood Culinary Essentials",
+        "description": "Essential wooden kitchenware crafted with care for eco-conscious cooking enthusiasts. Price: $20. Rating: 4.5/5",
+        "price": "$20",
+        "rating": "4.5/5"
+      },
+      {
+        "name": "Nature's Touch Utensil Set",
+        "description": "Premium wooden utensil set, designed for both functionality and aesthetics in the kitchen. Price: $50. Rating: 4.7/5",
+        "price": "$50",
+        "rating": "4.7/5"
+      }
+    ],
+    "jute_home_decor": [
+      {
+        "name": "Earthy Weave Home Accents",
+        "description": "Handcrafted jute home decor items, adding a touch of natural elegance to your living space. Price: $60. Rating: 4.5/5",
+        "price": "$60",
+        "rating": "4.5/5"
+      },
+      {
+        "name": "EcoChic Jute Decor",
+        "description": "Chic and sustainable jute home decor pieces, perfect for eco-friendly interior styling. Price: $40. Rating: 4.6/5",
+        "price": "$40",
+        "rating": "4.6/5"
+      },
+      {
+        "name": "Natural Fibers Living",
+        "description": "Beautifully crafted jute home decor reflecting the beauty of natural fibers, adding warmth to your home. Price: $80. Rating: 4.7/5",
+        "price": "$80",
+        "rating": "4.7/5"
+      }
+    ],
+    "jute_kitchenware_utensils": [
+      {
+        "name": "JuteJoy Kitchen Essentials",
+        "description": "Joyful and eco-friendly jute kitchenware essentials, bringing sustainability to your culinary space. Price: $25. Rating: 4.4/5",
+        "price": "$25",
+        "rating": "4.4/5"
+      },
+      {
+        "name": "EcoWeave Culinary Tools",
+        "description": "Eco-conscious culinary tools made from durable jute fibers, perfect for sustainable cooking. Price: $35. Rating: 4.5/5",
+        "price": "$35",
+        "rating": "4.5/5"
+      },
+      {
+        "name": "Natural Twist Kitchen Set",
+        "description": "Versatile jute kitchen set featuring natural textures and eco-friendly design for a greener kitchen. Price: $45. Rating: 4.3/5",
+        "price": "$45",
+        "rating": "4.3/5"
+      }
+    ],
+    "jute_and_wooden_jewellery": [
+      {
+        "name": "TimberTwine Jewelry Collection",
+        "description": "Unique jewelry collection combining the earthy charm of wood with the rustic allure of jute. Price: $50. Rating: 4.7/5",
+        "price": "$50",
+        "rating": "4.7/5"
+      },
+      {
+        "name": "Earthy Elegance Accessories",
+        "description": "Elegantly crafted accessories blending jute and wood for a touch of natural sophistication. Price: $35. Rating: 4.6/5",
+        "price": "$35",
+        "rating": "4.6/5"
+      },
+      {
+        "name": "EcoGlam Wooden Adornments",
+        "description": "Glamorous wooden adornments with jute accents, adding eco-friendly flair to your jewelry collection. Price: $40. Rating: 4.8/5",
+        "price": "$40",
+        "rating": "4.8/5"
+      }
+    ]
+  }
+  

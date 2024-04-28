@@ -1,4 +1,5 @@
 import { MdHome, MdKeyboardArrowRight } from "react-icons/md";
+import Swal from 'sweetalert2'
 
 const AddCrafts = () => {
     const handleAddCraft = e => {
@@ -9,14 +10,43 @@ const AddCrafts = () => {
         const subcategory_name = form.subcategory.value;
         const description = form.description.value;
         const price = form.price.value;
+        const rating = form.rating.value;
         const customization = form.customization.value;
         const processing_time = form.time.value;
         const stockStatus = form.stock.value;
         const userEmail = form.userEmail.value;
         const userName = form.userName.value;
-        const itemInfo = { image, item_name, subcategory_name, description, price, customization, processing_time, stockStatus, userEmail, userName }
+        const itemInfo = { image, item_name, subcategory_name, description, price, rating, customization, processing_time, stockStatus, userEmail, userName }
         console.log(itemInfo);
+        fetch('http://localhost:5000/crafts', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(itemInfo)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'Success',
+                        text: 'Craft Item Added Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Ok'
+                    })
+                }
+                else {
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'Failed to Add Craft. Please, Try Again.',
+                        icon: 'error',
+                        confirmButtonText: 'Ok'
+                    })
+                }
+            })
     }
+
     return (
         <div className="font-poppins">
             <div className="flex justify-between bg-gray-200 py-5 px-7 md:px-20">
@@ -46,12 +76,12 @@ const AddCrafts = () => {
 
 
                         <div className="flex flex-col space-y-2">
-                            <label>Price</label>
+                            <label>Price ($)</label>
                             <input type="text" name="price" id="" placeholder="Item Price" className="border border-gray-300 p-2 md:p-3" />
                         </div>
 
                         <div className="flex flex-col space-y-2">
-                            <label>Rating</label>
+                            <label>Rating (Out of 5)</label>
                             <input type="text" name="rating" id="" placeholder="Item Rating" className="border border-gray-300 p-2 md:p-3" />
                         </div>
 
@@ -65,7 +95,7 @@ const AddCrafts = () => {
                         </div>
 
                         <div className="flex flex-col space-y-2">
-                            <label>Processing Time</label>
+                            <label>Processing Time (days)</label>
                             <input type="text" name="time" id="" placeholder="Processing Time" className="border border-gray-300 p-2 md:p-3" />
                         </div>
 
