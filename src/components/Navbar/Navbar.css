@@ -1,0 +1,14 @@
+.bg-color {
+    background-color: #ffb901;
+}
+
+nav p:hover {
+    border-bottom: 2px solid black;
+    border-radius: 3px;
+}
+
+a.active {
+    border-bottom: 2px solid black;
+    border-radius: 3px;
+}
+
