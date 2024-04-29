@@ -48,7 +48,7 @@ const AddCrafts = () => {
     }
 
     return (
-        <div className="font-poppins">
+        <div>
             <div className="flex justify-between bg-gray-200 py-5 px-7 md:px-20">
                 <h3 className="font-oswald tracking-wide">Add Crafts</h3>
                 <div className="flex items-center space-x-3">

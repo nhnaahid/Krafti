@@ -17,8 +17,14 @@ const SignUp = () => {
         const email = form.get('email');
         const photo = form.get('photo');
         const password = form.get('password');
+        const isChecked = form.get('checkbox');
+        console.log(isChecked);
         // password validation
         const regex = /^(?=.*[a-z])(?=.*[A-Z])/;
+        if (!isChecked) {
+            toast.error('Please Accept the terms & conditions.')
+            return;
+        }
         if (password.length < 6 || password.length > 15) {
             toast.error('Password length should be 6 to 15 characters.')
             return;

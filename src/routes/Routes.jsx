@@ -7,6 +7,7 @@ import AddCrafts from "../pages/AddCrafts/AddCrafts";
 import MyCrafts from "../pages/MyCrafts/MyCrafts";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/Login/SignUp/SignUp";
+import CraftDetails from "../pages/CraftDetails/CraftDetails";
 
 const router = createBrowserRouter([
     {
@@ -29,7 +30,8 @@ const router = createBrowserRouter([
             },
             {
                 path: "/all-crafts",
-                element: <AllCrafts></AllCrafts>
+                element: <AllCrafts></AllCrafts>,
+                loader: () => fetch('http://localhost:5000/crafts')
             },
             {
                 path: "/add-crafts",
@@ -38,6 +40,11 @@ const router = createBrowserRouter([
             {
                 path: "/my-crafts",
                 element: <MyCrafts></MyCrafts>
+            },
+            {
+                path: "/crafts/:id",
+                element: <CraftDetails></CraftDetails>,
+                loader: ({ params }) => fetch(`http://localhost:5000/crafts/${params.id}`)
             }
         ]
     }

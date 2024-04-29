@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import { IoMdEye } from "react-icons/io";
 
 import './craftCard.css'
+import { Link } from "react-router-dom";
 
 const CraftCard = ({ craft }) => {
     // const {_id, customization, description, image, item_name, price, processing_time, rating, stockStatus, subcategory_name, userEmail, userName}=craft;
-    const { _id, customization, description, image, item_name, price, processing_time, rating, stockStatus, subcategory_name, userEmail, userName } = craft;
+    const { _id, image, item_name, price, rating, stockStatus } = craft;
     return (
         <div className='bg-base-200 card-container'>
             <div className="m-1 md:0 md:mx-5 md:my-10">
@@ -24,14 +25,16 @@ const CraftCard = ({ craft }) => {
                     <FaStar className="text-lg" fill="#ffb901"></FaStar>
                     <p>{rating}</p>
                 </div>
-                <button className="text-xl rounded-full bg-black text-white hover:text-black my-btn p-2"><IoMdEye></IoMdEye></button>
+                <Link to={`/crafts/${_id}`} className="text-xl rounded-full bg-black text-white hover:text-black my-btn p-2">
+                    <IoMdEye></IoMdEye>
+                </Link>
             </div>
         </div>
     );
 };
 
 CraftCard.propTypes = {
-
+    craft: PropTypes.object
 };
 
 export default CraftCard;
