@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { MdHome, MdKeyboardArrowRight } from "react-icons/md";
 import Swal from 'sweetalert2'
+import { AuthContext } from "../../providers/AuthProvider";
 
 const AddCrafts = () => {
+    const { user } = useContext(AuthContext);
+    console.log(user);
     const handleAddCraft = e => {
         e.preventDefault();
         const form = e.target;
@@ -110,12 +114,12 @@ const AddCrafts = () => {
                         </div>
                         <div className="flex flex-col space-y-2">
                             <label>User Name</label>
-                            <input type="text" name="userName" id="" placeholder="User Name" className="border border-gray-300 p-2 md:p-3" />
+                            <input type="text" name="userName" id="" placeholder="User Name" className="border border-gray-300 p-2 md:p-3" defaultValue={user && user?.displayName} />
                         </div>
 
                         <div className="flex flex-col space-y-2">
                             <label>User Email</label>
-                            <input type="email" name="userEmail" id="" placeholder="Email" className="border border-gray-300 p-2 md:p-3" />
+                            <input type="email" name="userEmail" id="" placeholder="Email" className="border border-gray-300 p-2 md:p-3" defaultValue={user && user?.email} />
                         </div>
                     </div>
                     <div className="flex flex-col space-y-2 mt-3">

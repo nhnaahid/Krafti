@@ -38,8 +38,9 @@ const router = createBrowserRouter([
                 element: <AddCrafts></AddCrafts>
             },
             {
-                path: "/my-crafts",
-                element: <MyCrafts></MyCrafts>
+                path: "/my-crafts/:email",
+                element: <MyCrafts></MyCrafts>,
+                loader: ({ params }) => fetch(`http://localhost:5000/my-crafts/${params.email}`)
             },
             {
                 path: "/crafts/:id",

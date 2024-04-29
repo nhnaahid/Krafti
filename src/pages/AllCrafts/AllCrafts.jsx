@@ -17,7 +17,7 @@ const AllCrafts = () => {
             </div>
             <div className="w-full md:w-1/2 mx-auto space-y-3 mt-16">
                 <h1 className="font-oswald font-semibold text-xl md:text-3xl text-center">ALL CRAFTS ITEM</h1>
-                <p className="text-xs md:text-sm text-center">Welcome to our All Crafts section, where creativity knows no bounds and imagination takes flight! Explore a plethora of crafting ideas: </p>
+                <p className="text-xs md:text-sm text-center">Welcome to our All Crafts section, where creativity knows no bounds and imagination takes flight! Explore a plethora of crafting ideas. </p>
             </div>
             <div className="overflow-x-auto mt-12 w-4/5 mx-auto">
                 <table className="table">

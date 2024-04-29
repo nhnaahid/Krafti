@@ -22,7 +22,7 @@ const SignUp = () => {
         // password validation
         const regex = /^(?=.*[a-z])(?=.*[A-Z])/;
         if (!isChecked) {
-            toast.error('Please Accept the terms & conditions.')
+            toast.error('Please Agreed to Our Privacy Policy.')
             return;
         }
         if (password.length < 6 || password.length > 15) {
@@ -36,8 +36,11 @@ const SignUp = () => {
 
         createUser(email, password)
             .then(result => {
-                updateUser(name, photo)
-                    .then(() => setUser({ ...user, displayName: name, photoURL: photo }))
+                updateUser(name, photo, email)
+                    .then(() => {
+                        setUser({ ...user, displayName: name, photoURL: photo, email: email })
+                        // console.log(user);
+                    })
                     .catch()
                 toast.success('User Registration Successful.');
                 console.log(result.user);

@@ -36,7 +36,7 @@ const Navbar = () => {
         <NavLink to="/"><p>Home</p></NavLink>
         <NavLink to="/all-crafts"><p>All Crafts</p></NavLink>
         <NavLink to="/add-crafts"><p>Add Crafts</p></NavLink>
-        <NavLink to="/my-crafts"><p>My Crafts</p></NavLink>
+        <NavLink to={`/my-crafts/${user?.email}`}><p>My Crafts</p></NavLink>
     </>
     return (
         <nav className={`bg-color flex items-center justify-between py-2 px-3 font-poppins fixed z-20 w-full ${theme === 'dark' && 'text-gray-100'}`}>
