@@ -37,10 +37,9 @@ const CraftDetails = () => {
                         <p><span className="font-bold">Description:</span> {description}</p>
                     </div>
                     <div className="flex gap-5 mb-3">
-                    <Link to=""><button className="btn btn-sm  border-black custom-btn mt-3 rounded-none hover:text-white">Add To Cart</button></Link>
-                    <Link to=""><button className="btn btn-sm  border-black my-btn mt-3 rounded-none">Buy Now</button></Link>
+                        <Link to=""><button className="btn btn-sm  border-black custom-btn mt-3 rounded-none hover:text-white">Add To Cart</button></Link>
+                        <Link to=""><button className="btn btn-sm  border-black my-btn mt-3 rounded-none">Buy Now</button></Link>
                     </div>
-
                 </div>
             </div>
         </div>

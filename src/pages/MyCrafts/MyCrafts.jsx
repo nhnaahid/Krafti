@@ -1,6 +1,6 @@
 import { MdHome, MdKeyboardArrowRight } from "react-icons/md";
 import { useLoaderData } from "react-router-dom";
-import CraftCard from "../../components/CraftCard/CraftCard";
+import MyCraftsCard from "../../components/MyCraftsCard/MyCraftsCard";
 
 const MyCrafts = () => {
     const crafts = useLoaderData();
@@ -16,12 +16,12 @@ const MyCrafts = () => {
                 </div>
             </div>
             <div className="w-full md:w-1/2 mx-auto space-y-3 mt-16">
-                <h1 className="font-oswald font-semibold text-xl md:text-3xl text-center">My CRAFT ITEMS</h1>
+                <h1 className="font-oswald font-semibold text-xl md:text-3xl text-center">MY CRAFT ITEMS</h1>
                 <p className="text-xs md:text-sm text-center">Welcome to My Crafts section, Here you will find all the crafts you have added to the database! Explore a plethora of crafting ideas. </p>
             </div>
             <div className="w-4/5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-5 md:mt-12">
                 {
-                    crafts.map(craft => <CraftCard craft={craft}></CraftCard>)
+                    crafts.map(craft => <MyCraftsCard key={craft._id} craft={craft}></MyCraftsCard>)
                 }
             </div>
         </div>
