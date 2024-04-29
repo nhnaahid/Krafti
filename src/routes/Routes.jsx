@@ -8,15 +8,16 @@ import MyCrafts from "../pages/MyCrafts/MyCrafts";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/Login/SignUp/SignUp";
 
-const router=createBrowserRouter([
+const router = createBrowserRouter([
     {
         path: "/",
         element: <MainLayout></MainLayout>,
         errorElement: <ErrorPage></ErrorPage>,
-        children:[
+        children: [
             {
                 path: "/",
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: () => fetch('http://localhost:5000/crafts')
             },
             {
                 path: "/login",
