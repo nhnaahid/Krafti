@@ -1,9 +1,48 @@
 import { MdHome, MdKeyboardArrowRight } from "react-icons/md";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const UpdateCraft = () => {
     const craft = useLoaderData();
-    const { _id, customization, description, image, item_name, price, processing_time, rating, stockStatus, subcategory_name, userEmail, userName } = craft;
+    const { _id, customization, description, image, item_name, price, processing_time, rating, stockStatus, subcategory_name } = craft;
+    console.log(craft);
+    const handleUpdateCraft = e => {
+        e.preventDefault();
+        const form = e.target;
+        const image = form.itemPhoto.value;
+        const item_name = form.itemName.value;
+        const subcategory_name = form.subcategory.value;
+        const description = form.description.value;
+        const price = form.price.value;
+        const rating = form.rating.value;
+        const customization = form.customization.value;
+        const processing_time = form.time.value;
+        const stockStatus = form.stock.value;
+        const updatedCraft = { image, item_name, subcategory_name, description, price, rating, customization, processing_time, stockStatus }
+        console.log(updatedCraft);
+
+        // send data to the server
+        fetch(`http://localhost:5000/crafts/${_id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updatedCraft)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.modifiedCount > 0) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Coffee Updated Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
+            })
+    }
+
     return (
         <div>
             <div className="flex justify-between bg-gray-200 py-5 px-7 md:px-20">
@@ -16,7 +55,7 @@ const UpdateCraft = () => {
             </div>
             <div className="w-4/5 md:w-3/5 mx-auto mt-5">
                 <h1 className="border-b border-gray-300 font-oswald tracking-wide text-2xl py-2">Update Craft Item</h1>
-                <form className="mt-5">
+                <form onSubmit={handleUpdateCraft} className="mt-5">
                     <div className="grid grid-cols-2 gap-5 ">
                         <div className="flex flex-col space-y-2">
                             <label>Item Name</label>
@@ -63,7 +102,6 @@ const UpdateCraft = () => {
                                 <option value="in-stock">In Stock</option>
                                 <option value="made-order">Made To Order</option>
                             </select>
-
                         </div>
                     </div>
                     <div className="flex flex-col space-y-2 mt-3">
