@@ -1,10 +1,44 @@
 import { MdHome, MdKeyboardArrowRight } from "react-icons/md";
 import { useLoaderData } from "react-router-dom";
 import MyCraftsCard from "../../components/MyCraftsCard/MyCraftsCard";
+import { useState } from "react";
+import Swal from "sweetalert2";
 
 const MyCrafts = () => {
-    const crafts = useLoaderData();
+    const loadedCrafts = useLoaderData();
+    const [crafts, setCrafts] = useState(loadedCrafts);
     console.log(crafts);
+    const handleDelete = (id) => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/crafts/${id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Craft Item has been deleted.",
+                                icon: "success"
+                            });
+                            // remove the user from the UI
+                            const remainingCrafts = crafts.filter(user => user._id !== id);
+                            setCrafts(remainingCrafts);
+                        }
+                    })
+            }
+        });
+    }
+
     return (
         <div>
             <div className="flex justify-between bg-gray-200 py-5 px-7 md:px-20">
@@ -21,7 +55,7 @@ const MyCrafts = () => {
             </div>
             <div className="w-4/5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-5 md:mt-12">
                 {
-                    crafts.map(craft => <MyCraftsCard key={craft._id} craft={craft}></MyCraftsCard>)
+                    crafts.map(craft => <MyCraftsCard key={craft._id} craft={craft} handleDelete={handleDelete}></MyCraftsCard>)
                 }
             </div>
         </div>

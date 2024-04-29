@@ -2,7 +2,7 @@ import { FaStar } from "react-icons/fa";
 import { IoMdEye } from "react-icons/io";
 import { Link } from "react-router-dom";
 
-const MyCraftsCard = ({ craft }) => {
+const MyCraftsCard = ({ craft, handleDelete }) => {
     const { _id, customization, description, image, item_name, price, processing_time, rating, stockStatus, subcategory_name, userEmail, userName } = craft;
     return (
         <div className='bg-base-200'>
@@ -28,7 +28,7 @@ const MyCraftsCard = ({ craft }) => {
             <div className="bg-white m-3 md:mx-5 md:my-3 text-center px-2 py-1">
                 <div className="flex mb-3 justify-around">
                     <Link to={`/update-crafts/${_id}`}><button className="btn btn-sm  border-black custom-btn mt-3 rounded-none hover:text-white">Update</button></Link>
-                    <Link to=""><button className="btn btn-sm  border-black my-btn mt-3 rounded-none">Delete</button></Link>
+                    <Link onClick={() => handleDelete(_id)}><button className="btn btn-sm  border-black my-btn mt-3 rounded-none">Delete</button></Link>
                 </div>
             </div>
             {/* <div className='card-info w-full'>
