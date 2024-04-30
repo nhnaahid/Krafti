@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
 import { MdHome, MdKeyboardArrowRight } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../../providers/AuthProvider";
 import { toast } from "react-toastify";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const SignUp = () => {
     const navigate = useNavigate();

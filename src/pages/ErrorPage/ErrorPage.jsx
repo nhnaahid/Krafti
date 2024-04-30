@@ -19,7 +19,7 @@ const ErrorPage = () => {
                 <div className='text-center space-y-2'>
                     <h1 className='text-4xl font-bold text-red-600'>Ooops...</h1>
                     <h1 className='text-2xl font-bold'>Page Not Found</h1>
-                    <p className='font-semibold'>The page you are looking for does not exist or another error occurred, go back to homepage.</p>
+                    <p className='font-semibold'>The page you are looking for does not exist or another error occurred.</p>
                 </div>
                 <div>
                     <Link onClick={handleGoBack} className="btn btn-xs sm:btn-sm md:btn-md bg-emerald-500 hover:bg-emerald-400 text-white w-fit my-5">Go Back</Link>
