@@ -8,7 +8,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { toast } from "react-toastify";
 
 const Navbar = () => {
-    const [theme, setTheme] = useState("light");
+    const { theme, setTheme } = useContext(AuthContext);
     const [close, setClose] = useState(false);
     const { user, logOut } = useContext(AuthContext);
     // console.log(user);
@@ -39,7 +39,7 @@ const Navbar = () => {
         <NavLink to={`/my-crafts/${user?.email}`}><p>My Crafts</p></NavLink>
     </>
     return (
-        <nav className={`bg-color flex items-center justify-between py-2 px-3 font-poppins fixed z-20 w-full ${theme === 'dark' && 'text-gray-100'}`}>
+        <nav className={`bg-color flex items-center justify-between py-2 px-3 font-poppins fixed z-20 w-full ${theme === 'dark' && 'text-gray-200'}`}>
             <div onClick={() => setClose(!close)} className="text-xl block md:hidden ">
                 {
                     close ? <AiOutlineClose></AiOutlineClose> : <AiOutlineMenu></AiOutlineMenu>

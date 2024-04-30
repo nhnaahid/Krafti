@@ -4,10 +4,13 @@ import { IoMdEye } from "react-icons/io";
 
 import './craftCard.css'
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const CraftCard = ({ craft }) => {
     // const {_id, customization, description, image, item_name, price, processing_time, rating, stockStatus, subcategory_name, userEmail, userName}=craft;
     const { _id, image, item_name, price, rating, stockStatus } = craft;
+    const { theme } = useContext(AuthContext);
     return (
         <div className='bg-base-200 card-container'>
             <div className="m-1 md:0 md:mx-5 md:my-10">
@@ -15,7 +18,7 @@ const CraftCard = ({ craft }) => {
                     <img className='object-cover' src={image} alt="" />
                 </figure>
             </div>
-            <div className="bg-white m-3 md:mx-5 md:my-3 text-center px-2 py-1">
+            <div className={`bg-white m-3 md:mx-5 md:my-3 text-center px-2 py-1 ${theme === 'dark' && 'bg-gray-300'}`}>
                 <h2 className="text-lg md:text-xl font-semibold">{item_name}</h2>
                 <h3 className="text-base md:text-lg font-semibold">$ {price}</h3>
             </div>

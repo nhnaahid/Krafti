@@ -13,6 +13,7 @@ export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [theme, setTheme] = useState("light");
 
     // create user
     const createUser = (email, password) => {
@@ -75,7 +76,9 @@ const AuthProvider = ({ children }) => {
         loginWithFacebook,
         loginWithGithub,
         logOut,
-        updateUser
+        updateUser,
+        theme,
+        setTheme
     };
 
     // observer

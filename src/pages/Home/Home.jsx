@@ -3,16 +3,19 @@ import Banner from "../../components/Banner/Banner";
 import CraftCard from "../../components/CraftCard/CraftCard";
 import CustomCraft from "../../components/CustomCraft/CustomCraft";
 import NewsLetter from "../../components/NewsLetter/NewsLetter";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Home = () => {
+    const { theme } = useContext(AuthContext);
     const crafts = useLoaderData();
     const slicedCrafts = crafts.slice(0, 6);
     // console.log(slicedCrafts);
     return (
-        <div>
+        <div className={`${theme === 'dark' && 'bg-[#1d232a]'}`}>
             <Banner></Banner>
             <div className="mt-20">
-                <div className="w-full md:w-1/2 mx-auto space-y-3">
+                <div className={`w-full md:w-1/2 mx-auto space-y-3 ${theme === 'dark' && 'text-gray-200'}`}>
                     <h1 className="font-oswald font-semibold text-xl md:text-3xl text-center">TRENDING PRODUCTS</h1>
                     <p className="text-xs md:text-base text-center">Experience the natural beauty of jute and wood craftsmanship at our store. Explore the trending products and bring a touch of rustic charm to your life!</p>
                 </div>
