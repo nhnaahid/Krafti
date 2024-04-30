@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "../../components/Banner/Banner";
 import CraftCard from "../../components/CraftCard/CraftCard";
+import CustomCraft from "../../components/CustomCraft/CustomCraft";
 
 const Home = () => {
     const crafts = useLoaderData();
@@ -24,6 +25,7 @@ const Home = () => {
                     }
                 </div>
             </div>
+            <CustomCraft></CustomCraft>
         </div>
     );
 };
