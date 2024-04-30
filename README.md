@@ -1,46 +1,52 @@
 
 # SkyLine-Real Estate & Properties.
 
-Welcome to SkyLine-Real Estate & Properties Web Application! This application is designed to help users view property details, manage favorite deals, register, login, and update their profiles easily. It also provides secure authentication options including email/password login, and login with Google and Facebook. The application also utilizes private routing to ensure secure access to user-specific features.
+Welcome to the Wood and Jute Craft Store website! Our platform is dedicated to showcasing exquisite handcrafted products made from wood and jute. Whether you're looking for unique home decor items, stylish accessories, or thoughtful gifts, we have something special for everyone.
 
 ## Demo
 
-[Live Link](https://skyline-real-state.web.app/)
+[Live Link](https://krafti-a97d7.web.app/)
 
 
 ## Features
 
-- View Property Details: Users can browse through various property listings and view detailed information about each property.
-- Add to Favorites: Users can add their favorite deals to the local storage for quick access.
-- Register New User: New users can easily register by providing necessary details.
-- Login with Email and Password: Registered users can log in securely using their email and password.
-- Login with Google and Facebook: Users can also choose to log in using their Google or Facebook accounts for added convenience.
-- User Profile: Users have access to their profile where they can view their information and update it as needed.
-- Update User Profile: Users can edit and update their profile information.
-- Private Routing: Certain routes are protected and require authentication for access to ensure user privacy and security.
+1. **Wide Range of Products**: Explore a diverse collection of handcrafted items including home decor, furniture, accessories, and more, all made from high-quality wood and jute materials.
+
+2. **Customization Options**: Personalize your purchases with custom engraving, sizing, and finishing options to create bespoke pieces tailored to your preferences.
+
+3. **Artisan Profiles**: Learn about the talented artisans behind each product, their craftsmanship techniques, and the stories behind their creations, fostering a deeper appreciation for their work.
+
+4. **Secure Online Shopping**: Enjoy a safe and seamless shopping experience with secure payment gateways and encryption protocols to safeguard your sensitive information.
+
+5. **Educational Resources**: Discover articles, guides, and tutorials on woodworking and jute crafting techniques, empowering enthusiasts to hone their skills and embark on their own creative projects.
+
+6. **Sustainable Practices**: We prioritize sustainability by sourcing materials responsibly and supporting eco-friendly production methods, ensuring our products are both beautiful and environmentally conscious.
+
+7. **Community Engagement**: Join our vibrant community of craft enthusiasts to share ideas, experiences, and inspiration, fostering connections and collaboration among like-minded individuals.
+
+8. **Regular Updates**: Stay informed about new product releases, promotions, and events through our newsletter and social media channels, ensuring you never miss out on the latest offerings.
+
+9. **Responsive Customer Support**: Our dedicated support team is available to assist you with any inquiries, concerns, or feedback, providing prompt and helpful assistance to ensure your satisfaction.
+
+10. **Mobile-Friendly Design**: Access our website seamlessly from any device, including smartphones and tablets, with a responsive design optimized for smooth navigation and functionality on all screen sizes.
 
 
 
-## Technology Used
 
-- HTML5
-- CSS3
-- Tailwind CSS
-- daisyUI
-- JavaScript
-- React.js
-- Local storage as database.
-- Authentication:
-  - Firebase Authentication (for email/password login)
-  - Google auth.
-  - Facebook auth.
+## Categories
+- Wooden Furniture & Sculptures
+- Wooden Home Decor
+- Wooden Utensils and Kitchenware
+- Jute Home Decor
+- Jute Kitchenware & utensils
+- Jute and wooden jewellery
 
 
 
 ## npm Packages
 
-- AOS Package
-- React-leaflet
+- React Awesome reveal
+-  React-tooltip
 - Swiper slider
 - React helmate async
 - React-icons
