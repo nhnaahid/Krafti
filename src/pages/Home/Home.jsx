@@ -5,6 +5,7 @@ import CustomCraft from "../../components/CustomCraft/CustomCraft";
 import NewsLetter from "../../components/NewsLetter/NewsLetter";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import Categories from "../../components/Categories/Categories";
 
 const Home = () => {
     const { theme } = useContext(AuthContext);
@@ -14,6 +15,10 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
+            <div>
+                <Categories></Categories>
+            </div>
+
             <div className="mt-20">
                 <div className={`w-full md:w-1/2 mx-auto space-y-3 ${theme === 'dark' && 'text-gray-200'}`}>
                     <h1 className="font-oswald font-semibold text-xl md:text-3xl text-center">TRENDING PRODUCTS</h1>

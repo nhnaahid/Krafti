@@ -71,8 +71,8 @@ const AddCrafts = () => {
                             <input type="text" name="itemName" id="" placeholder="Item Name" className="border border-gray-300 p-2 md:p-3" required />
                         </div>
                         <div className="flex flex-col space-y-2">
-                            <label>Subcategory</label>
-                            <input type="text" name="subcategory" id="" placeholder="Subcategory Name" className="border border-gray-300 p-2 md:p-3" required />
+                            <label>Category</label>
+                            <input type="text" name="subcategory" id="" placeholder="Category Name" className="border border-gray-300 p-2 md:p-3" required />
                         </div>
                         <div className="flex flex-col space-y-2">
                             <label>Item Photo</label>

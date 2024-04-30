@@ -10,6 +10,7 @@ import CraftDetails from "../pages/CraftDetails/CraftDetails";
 import UpdateCraft from "../pages/UpdateCraft/UpdateCraft";
 import PrivateRoute from "./PrivateRoute";
 import SignUp from "../pages/SignUp/SignUp";
+import CategoryItems from "../pages/CategoryItems/CategoryItems";
 
 const router = createBrowserRouter([
     {
@@ -53,6 +54,11 @@ const router = createBrowserRouter([
                 path: '/update-crafts/:id',
                 element: <PrivateRoute><UpdateCraft></UpdateCraft></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/crafts/${params.id}`)
+            },
+            {
+                path: "/category/:categoryName",
+                element: <CategoryItems></CategoryItems>,
+                loader: ({ params }) => fetch(`http://localhost:5000/categories/${params.categoryName}`)
             }
         ]
     }
