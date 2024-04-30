@@ -22,7 +22,7 @@ const AddCrafts = () => {
         const userName = form.userName.value;
         const itemInfo = { image, item_name, subcategory_name, description, price, rating, customization, processing_time, stockStatus, userEmail, userName }
         console.log(itemInfo);
-        fetch('http://localhost:5000/crafts', {
+        fetch('https://krafti-server.vercel.app/crafts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

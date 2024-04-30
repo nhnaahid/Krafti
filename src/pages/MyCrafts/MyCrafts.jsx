@@ -26,7 +26,7 @@ const MyCrafts = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/crafts/${id}`, {
+                fetch(`https://krafti-server.vercel.app/crafts/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

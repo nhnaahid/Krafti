@@ -21,7 +21,7 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/crafts')
+                loader: () => fetch('https://krafti-server.vercel.app/crafts')
             },
             {
                 path: "/login",
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
             {
                 path: "/all-crafts",
                 element: <AllCrafts></AllCrafts>,
-                loader: () => fetch('http://localhost:5000/crafts')
+                loader: () => fetch('https://krafti-server.vercel.app/crafts')
             },
             {
                 path: "/add-crafts",
@@ -43,22 +43,22 @@ const router = createBrowserRouter([
             {
                 path: "/my-crafts/:email",
                 element: <PrivateRoute><MyCrafts></MyCrafts></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/my-crafts/${params.email}`)
+                loader: ({ params }) => fetch(`https://krafti-server.vercel.app/my-crafts/${params.email}`)
             },
             {
                 path: "/crafts/:id",
                 element: <PrivateRoute><CraftDetails></CraftDetails></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/crafts/${params.id}`)
+                loader: ({ params }) => fetch(`https://krafti-server.vercel.app/crafts/${params.id}`)
             },
             {
                 path: '/update-crafts/:id',
                 element: <PrivateRoute><UpdateCraft></UpdateCraft></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/crafts/${params.id}`)
+                loader: ({ params }) => fetch(`https://krafti-server.vercel.app/crafts/${params.id}`)
             },
             {
                 path: "/category/:categoryName",
                 element: <CategoryItems></CategoryItems>,
-                loader: ({ params }) => fetch(`http://localhost:5000/categories/${params.categoryName}`)
+                loader: ({ params }) => fetch(`https://krafti-server.vercel.app/categories/${params.categoryName}`)
             }
         ]
     }

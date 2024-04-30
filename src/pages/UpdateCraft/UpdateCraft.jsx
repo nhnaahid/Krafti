@@ -22,7 +22,7 @@ const UpdateCraft = () => {
         console.log(updatedCraft);
 
         // send data to the server
-        fetch(`http://localhost:5000/crafts/${_id}`, {
+        fetch(`https://krafti-server.vercel.app/crafts/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
