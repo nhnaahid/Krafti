@@ -11,7 +11,7 @@ const Navbar = () => {
     const [theme, setTheme] = useState("light");
     const [close, setClose] = useState(false);
     const { user, logOut } = useContext(AuthContext);
-    console.log(user);
+    // console.log(user);
     const handleTheme = () => {
         if (theme === "dark") {
             document.querySelector("html").setAttribute("data-theme", "light")

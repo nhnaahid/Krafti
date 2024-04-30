@@ -33,7 +33,7 @@ const CraftDetails = () => {
                     <div className="space-y-1 my-2">
                         <p><span className="font-bold">Category:</span> {subcategory_name}</p>
                         <p><span className="font-bold">Customization:</span> {customization}</p>
-                        <p><span className="font-bold">Processing Time:</span> {processing_time} Days</p>
+                        <p><span className="font-bold">Processing Time:</span> {processing_time} Day/s</p>
                         <p><span className="font-bold">Description:</span> {description}</p>
                     </div>
                     <div className="flex gap-5 mb-3">

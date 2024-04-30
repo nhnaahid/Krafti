@@ -84,7 +84,7 @@ const UpdateCraft = () => {
                         <div className="flex flex-col space-y-2">
                             <label>Customization?</label>
                             <select name="customization" className="border border-gray-300 p-2 md:p-3">
-                                <option value="default">{customization}</option>
+                                <option value={`${customization}`}>{customization}</option>
                                 <option value="Yes">Yes</option>
                                 <option value="No">No</option>
                             </select>
@@ -98,7 +98,7 @@ const UpdateCraft = () => {
                         <div className="flex flex-col space-y-2">
                             <label>Stock Status</label>
                             <select name="stock" className="border border-gray-300 p-2 md:p-3">
-                                <option value="default">{stockStatus}</option>
+                                <option value={`${stockStatus}`}>{stockStatus}</option>
                                 <option value="in-stock">In Stock</option>
                                 <option value="made-order">Made To Order</option>
                             </select>

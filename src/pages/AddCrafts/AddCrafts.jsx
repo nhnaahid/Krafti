@@ -39,6 +39,7 @@ const AddCrafts = () => {
                         icon: 'success',
                         confirmButtonText: 'Ok'
                     })
+                    form.reset();
                 }
                 else {
                     Swal.fire({
@@ -67,31 +68,31 @@ const AddCrafts = () => {
                     <div className="grid grid-cols-2 gap-5 ">
                         <div className="flex flex-col space-y-2">
                             <label>Item Name</label>
-                            <input type="text" name="itemName" id="" placeholder="Item Name" className="border border-gray-300 p-2 md:p-3" />
+                            <input type="text" name="itemName" id="" placeholder="Item Name" className="border border-gray-300 p-2 md:p-3" required />
                         </div>
                         <div className="flex flex-col space-y-2">
                             <label>Subcategory</label>
-                            <input type="text" name="subcategory" id="" placeholder="Subcategory Name" className="border border-gray-300 p-2 md:p-3" />
+                            <input type="text" name="subcategory" id="" placeholder="Subcategory Name" className="border border-gray-300 p-2 md:p-3" required />
                         </div>
                         <div className="flex flex-col space-y-2">
                             <label>Item Photo</label>
-                            <input type="text" name="itemPhoto" id="" placeholder="Item Photo url" className="border border-gray-300 p-2 md:p-3" />
+                            <input type="text" name="itemPhoto" id="" placeholder="Item Photo url" className="border border-gray-300 p-2 md:p-3" required />
                         </div>
 
 
                         <div className="flex flex-col space-y-2">
                             <label>Price ($)</label>
-                            <input type="text" name="price" id="" placeholder="Item Price" className="border border-gray-300 p-2 md:p-3" />
+                            <input type="text" name="price" id="" placeholder="Item Price" className="border border-gray-300 p-2 md:p-3" required />
                         </div>
 
                         <div className="flex flex-col space-y-2">
                             <label>Rating (Out of 5)</label>
-                            <input type="text" name="rating" id="" placeholder="Item Rating" className="border border-gray-300 p-2 md:p-3" />
+                            <input type="text" name="rating" id="" placeholder="Item Rating" className="border border-gray-300 p-2 md:p-3" required />
                         </div>
 
                         <div className="flex flex-col space-y-2">
                             <label>Customization?</label>
-                            <select name="customization" className="border border-gray-300 p-2 md:p-3">
+                            <select name="customization" className="border border-gray-300 p-2 md:p-3 " required>
                                 <option value="" disabled selected>Select</option>
                                 <option value="Yes">Yes</option>
                                 <option value="No">No</option>
@@ -100,12 +101,12 @@ const AddCrafts = () => {
 
                         <div className="flex flex-col space-y-2">
                             <label>Processing Time (days)</label>
-                            <input type="text" name="time" id="" placeholder="Processing Time" className="border border-gray-300 p-2 md:p-3" />
+                            <input type="text" name="time" id="" placeholder="Processing Time" className="border border-gray-300 p-2 md:p-3" required />
                         </div>
 
                         <div className="flex flex-col space-y-2">
                             <label>Stock Status</label>
-                            <select name="stock" className="border border-gray-300 p-2 md:p-3">
+                            <select name="stock" className="border border-gray-300 p-2 md:p-3" required>
                                 <option value="" disabled selected>Select</option>
                                 <option value="in-stock">In Stock</option>
                                 <option value="made-order">Made To Order</option>
@@ -114,20 +115,20 @@ const AddCrafts = () => {
                         </div>
                         <div className="flex flex-col space-y-2">
                             <label>User Name</label>
-                            <input type="text" name="userName" id="" placeholder="User Name" className="border border-gray-300 p-2 md:p-3" defaultValue={user && user?.displayName} />
+                            <input type="text" name="userName" id="" placeholder="User Name" className="border border-gray-300 p-2 md:p-3" defaultValue={user && user?.displayName} required />
                         </div>
 
                         <div className="flex flex-col space-y-2">
                             <label>User Email</label>
-                            <input type="email" name="userEmail" id="" placeholder="Email" className="border border-gray-300 p-2 md:p-3" defaultValue={user && user?.email} />
+                            <input type="email" name="userEmail" id="" placeholder="Email" className="border border-gray-300 p-2 md:p-3" defaultValue={user && user?.email} required />
                         </div>
                     </div>
                     <div className="flex flex-col space-y-2 mt-3">
                         <label>Short Description</label>
-                        <textarea id="" name="description" rows="2" cols="50" className="border border-gray-300 p-2 md:p-3" placeholder="Write a short description"></textarea>
+                        <textarea id="" name="description" rows="2" cols="50" className="border border-gray-300 p-2 md:p-3" placeholder="Write a short description" required></textarea>
 
                     </div>
-                    <input type="submit" value="Add Craft" className="w-full btn btn-sm md:btn-md btn-outline custom-btn rounded-none hover:text-white mt-3" />
+                    <input type="submit" value="Add Craft" className="w-full btn btn-sm md:btn-md btn-outline custom-btn rounded-none hover:text-white mt-3" required />
                 </form>
             </div>
         </div>

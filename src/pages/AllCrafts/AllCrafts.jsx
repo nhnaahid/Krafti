@@ -1,6 +1,5 @@
 import { MdHome, MdKeyboardArrowRight } from "react-icons/md";
 import { useLoaderData } from "react-router-dom";
-import CraftCard from "../../components/CraftCard/CraftCard";
 import CraftTable from "../../components/CraftTable/CraftTable";
 
 const AllCrafts = () => {
@@ -27,7 +26,7 @@ const AllCrafts = () => {
                             <th>Craft Name</th>
                             <th>Price</th>
                             <th>Rating</th>
-                            <th>Customization</th>
+                            <th>Category</th>
                             <th></th>
                         </tr>
                     </thead>

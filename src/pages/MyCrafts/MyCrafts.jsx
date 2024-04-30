@@ -6,8 +6,15 @@ import Swal from "sweetalert2";
 
 const MyCrafts = () => {
     const loadedCrafts = useLoaderData();
+    // console.log(loadedCrafts);
     const [crafts, setCrafts] = useState(loadedCrafts);
-    console.log(crafts);
+    // console.log(crafts);
+    const handleFilter = e => {
+        const filter = e.target.value;
+        console.log(filter);
+        const filteredCrafts = loadedCrafts.filter(craft => craft.customization === filter);
+        setCrafts(filteredCrafts);
+    }
     const handleDelete = (id) => {
         Swal.fire({
             title: "Are you sure?",
@@ -31,7 +38,7 @@ const MyCrafts = () => {
                                 icon: "success"
                             });
                             // remove the user from the UI
-                            const remainingCrafts = crafts.filter(user => user._id !== id);
+                            const remainingCrafts = crafts.filter(craft => craft._id !== id);
                             setCrafts(remainingCrafts);
                         }
                     })
@@ -53,7 +60,16 @@ const MyCrafts = () => {
                 <h1 className="font-oswald font-semibold text-xl md:text-3xl text-center">MY CRAFT ITEMS</h1>
                 <p className="text-xs md:text-sm text-center">Welcome to My Crafts section, Here you will find all the crafts you have added to the database! Explore a plethora of crafting ideas. </p>
             </div>
-            <div className="w-4/5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-5 md:mt-12">
+
+            <div className="flex gap-5 items-center space-y-2 w-4/5 mx-auto mt-5 md:mt-12">
+                <label className="text-gray-600 font-semibold text-lg">Filter By:</label>
+                <select onChange={handleFilter} name="customization" className="border border-gray-300 p-1">
+                    <option value="" disabled selected>Customization</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div className="w-4/5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-2 md:mt-4">
                 {
                     crafts.map(craft => <MyCraftsCard key={craft._id} craft={craft} handleDelete={handleDelete}></MyCraftsCard>)
                 }
