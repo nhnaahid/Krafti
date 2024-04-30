@@ -10,7 +10,7 @@ const ErrorPage = () => {
         navigate(-1);
     }
     return (
-        <div>
+        <div className="mb-20">
             <Navbar></Navbar>
             <div className='flex flex-col items-center justify-center'>
                 <div className='mt-16'>

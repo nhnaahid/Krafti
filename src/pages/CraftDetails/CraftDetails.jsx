@@ -4,9 +4,9 @@ import { Link, useLoaderData } from "react-router-dom";
 
 const CraftDetails = () => {
     const craft = useLoaderData();
-    const { _id, customization, description, image, item_name, price, processing_time, rating, stockStatus, subcategory_name, userEmail, userName } = craft;
+    const { customization, description, image, item_name, price, processing_time, rating, stockStatus, subcategory_name} = craft;
     return (
-        <div>
+        <div className="mb-20">
             <div className="flex justify-between bg-gray-200 py-5 px-7 md:px-20">
                 <h3 className="font-oswald tracking-wide">Craft Details</h3>
                 <div className="flex items-center space-x-3">

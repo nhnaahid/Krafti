@@ -5,7 +5,7 @@ import CraftTable from "../../components/CraftTable/CraftTable";
 const AllCrafts = () => {
     const crafts = useLoaderData();
     return (
-        <div>
+        <div className="mb-20">
             <div className="flex justify-between bg-gray-200 py-5 px-7 md:px-20">
                 <h3 className="font-oswald tracking-wide">All Crafts</h3>
                 <div className="flex items-center space-x-3">
