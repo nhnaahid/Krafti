@@ -13,9 +13,9 @@ const CraftCard = ({ craft }) => {
     const { theme } = useContext(AuthContext);
     return (
         <div className='bg-base-200 card-container'>
-            <div className="m-1 md:0 md:mx-5 md:my-10">
-                <figure>
-                    <img className='object-cover' src={image} alt="" />
+            <div className="m-2 md:0 md:mx-5 md:my-10">
+                <figure className="h-[550px] md:h-[450px]">
+                    <img className='object-cover w-full h-full' src={image} alt="" />
                 </figure>
             </div>
             <div className={`bg-white m-3 md:mx-5 md:my-3 text-center px-2 py-1 ${theme === 'dark' && 'bg-gray-300'}`}>
@@ -23,12 +23,12 @@ const CraftCard = ({ craft }) => {
                 <h3 className="text-base md:text-lg font-semibold">$ {price}</h3>
             </div>
             <div className='card-info w-full'>
-                <p className="bg-black text-white p-2 rounded-full hover:text-black my-btn">{stockStatus}</p>
+                <p className="text-xs md:text-base bg-black text-white p-2 rounded-full hover:text-black my-btn">{stockStatus}</p>
                 <div className="flex gap-1 bg-black text-white p-2 rounded-full hover:text-black my-btn star">
-                    <FaStar className="text-lg" fill="#ffb901"></FaStar>
-                    <p>{rating}</p>
+                    <FaStar className="text-sm md:text-lg" fill="#ffb901"></FaStar>
+                    <p className="text-xs md:text-base">{rating}</p>
                 </div>
-                <Link to={`/crafts/${_id}`} className="text-xl rounded-full bg-black text-white hover:text-black my-btn p-2">
+                <Link to={`/crafts/${_id}`} className="text-lg md:text-xl rounded-full bg-black text-white hover:text-black my-btn p-2">
                     <IoMdEye></IoMdEye>
                 </Link>
             </div>

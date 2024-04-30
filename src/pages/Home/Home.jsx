@@ -12,7 +12,7 @@ const Home = () => {
     const slicedCrafts = crafts.slice(0, 6);
     // console.log(slicedCrafts);
     return (
-        <div className={`${theme === 'dark' && 'bg-[#1d232a]'}`}>
+        <div>
             <Banner></Banner>
             <div className="mt-20">
                 <div className={`w-full md:w-1/2 mx-auto space-y-3 ${theme === 'dark' && 'text-gray-200'}`}>

@@ -6,9 +6,9 @@ const MyCraftsCard = ({ craft, handleDelete }) => {
     const { _id, customization, description, image, item_name, price, processing_time, rating, stockStatus, subcategory_name, userEmail, userName } = craft;
     return (
         <div className='bg-base-200'>
-            <div className="m-1 md:0 md:mx-5 md:my-10">
-                <figure>
-                    <img className='object-cover' src={image} alt="" />
+            <div className="m-2 md:0 md:mx-5 md:my-10">
+                <figure className="h-[500px] md:h-[400px]">
+                    <img className='object-cover w-full h-full' src={image} alt="" />
                 </figure>
             </div>
             <div className="bg-white m-3 md:mx-5 md:my-3 text-center px-2 py-1">
