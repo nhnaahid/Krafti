@@ -1,5 +1,5 @@
 
-# SkyLine-Real Estate & Properties.
+# Krafti.
 
 Welcome to the Wood and Jute Craft Store website! Our platform is dedicated to showcasing exquisite handcrafted products made from wood and jute. Whether you're looking for unique home decor items, stylish accessories, or thoughtful gifts, we have something special for everyone.
 
