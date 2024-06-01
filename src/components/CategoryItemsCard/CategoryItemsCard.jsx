@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const CategoryItemsCard = ({ item }) => {
     console.log(item);
-    const { _id, image, item_name, description, subcategory_name, price, rating, processing_time } = item;
+    const { _id, image, item_name, description, subcategory_name, } = item;
     return (
         <div className="h-[600px]">
             <div className="card w-96 bg-base-100 shadow-xl h-full">
