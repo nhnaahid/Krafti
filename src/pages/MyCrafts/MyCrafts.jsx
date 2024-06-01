@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import MyCraftsCard from "../../components/MyCraftsCard/MyCraftsCard";
 import { useState } from "react";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const MyCrafts = () => {
     const loadedCrafts = useLoaderData();
@@ -48,6 +49,9 @@ const MyCrafts = () => {
 
     return (
         <div className="mb-20">
+            <Helmet>
+                <title>Krafti | My Crafts</title>
+            </Helmet>
             <div className="flex justify-between bg-gray-200 py-5 px-7 md:px-20">
                 <h3 className="font-oswald tracking-wide">My Crafts</h3>
                 <div className="flex items-center space-x-3">

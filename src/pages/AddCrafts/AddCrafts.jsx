@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { MdHome, MdKeyboardArrowRight } from "react-icons/md";
 import Swal from 'sweetalert2'
 import { AuthContext } from "../../providers/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const AddCrafts = () => {
     const { user } = useContext(AuthContext);
@@ -54,6 +55,9 @@ const AddCrafts = () => {
 
     return (
         <div className="mb-20">
+            <Helmet>
+                <title>Krafti | Add Crafts</title>
+            </Helmet>
             <div className="flex justify-between bg-gray-200 py-5 px-7 md:px-20">
                 <h3 className="font-oswald tracking-wide">Add Crafts</h3>
                 <div className="flex items-center space-x-3">

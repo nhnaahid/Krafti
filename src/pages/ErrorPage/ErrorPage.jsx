@@ -2,6 +2,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import error from '../../assets/error.gif'
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
+import { Helmet } from 'react-helmet-async';
 
 
 const ErrorPage = () => {
@@ -11,6 +12,9 @@ const ErrorPage = () => {
     }
     return (
         <div className="mb-20">
+            <Helmet>
+                <title>Krafti | Error</title>
+            </Helmet>
             <Navbar></Navbar>
             <div className='flex flex-col items-center justify-center'>
                 <div className='mt-16'>

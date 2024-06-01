@@ -1,12 +1,16 @@
+import { Helmet } from "react-helmet-async";
 import { FaStar } from "react-icons/fa";
 import { MdHome, MdKeyboardArrowRight } from "react-icons/md";
 import { Link, useLoaderData } from "react-router-dom";
 
 const CraftDetails = () => {
     const craft = useLoaderData();
-    const { customization, description, image, item_name, price, processing_time, rating, stockStatus, subcategory_name} = craft;
+    const { customization, description, image, item_name, price, processing_time, rating, stockStatus, subcategory_name } = craft;
     return (
         <div className="mb-20">
+            <Helmet>
+                <title>Krafti | Craft-{item_name}</title>
+            </Helmet>
             <div className="flex justify-between bg-gray-200 py-5 px-7 md:px-20">
                 <h3 className="font-oswald tracking-wide">Craft Details</h3>
                 <div className="flex items-center space-x-3">

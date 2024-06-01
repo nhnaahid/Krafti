@@ -6,6 +6,7 @@ import NewsLetter from "../../components/NewsLetter/NewsLetter";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Categories from "../../components/Categories/Categories";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
     const { theme } = useContext(AuthContext);
@@ -14,6 +15,9 @@ const Home = () => {
     // console.log(slicedCrafts);
     return (
         <div>
+            <Helmet>
+                <title>Krafti | Home</title>
+            </Helmet>
             <Banner></Banner>
             <div>
                 <Categories></Categories>

@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../../providers/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const SignUp = () => {
     const navigate = useNavigate();
@@ -53,6 +54,9 @@ const SignUp = () => {
     }
     return (
         <div className="mb-20">
+            <Helmet>
+                <title>Krafti | Sign Up</title>
+            </Helmet>
             <div className="flex justify-between bg-gray-200 py-5 px-7 md:px-20">
                 <h3 className="font-oswald tracking-wide">Sign Up</h3>
                 <div className="flex items-center space-x-3">

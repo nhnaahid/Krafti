@@ -5,6 +5,7 @@ import { MdHome, MdKeyboardArrowRight } from "react-icons/md";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../providers/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
     const { loginUser, loginWithGoogle, loginWithFacebook, loginWithGithub } = useContext(AuthContext);
@@ -64,6 +65,9 @@ const Login = () => {
     }
     return (
         <div className="mb-20">
+            <Helmet>
+                <title>Krafti | Login</title>
+            </Helmet>
             <div className="flex justify-between bg-gray-200 py-5 px-7 md:px-20">
                 <h3 className="font-oswald tracking-wide">Sign In</h3>
                 <div className="flex items-center space-x-3">
