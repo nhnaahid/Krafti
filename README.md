@@ -3,9 +3,10 @@
 
 Welcome to the Wood and Jute Craft Store website! Our platform is dedicated to showcasing exquisite handcrafted products made from wood and jute. Whether you're looking for unique home decor items, stylish accessories, or thoughtful gifts, we have something special for everyone.
 
-## Demo
+## Links
 
 [Live Link](https://krafti-a97d7.web.app/)
+[Server Side] (https://vercel.com/nazmul-hassan-nahids-projects/krafti-server)
 
 
 ## Features
@@ -14,7 +15,7 @@ Welcome to the Wood and Jute Craft Store website! Our platform is dedicated to s
 
 2. **Customization Options**: Personalize your purchases with custom engraving, sizing, and finishing options to create bespoke pieces tailored to your preferences.
 
-3. **Secure Online Shopping**: Enjoy a safe and seamless shopping experience with secure payment gateways and encryption protocols to safeguard your sensitive information.
+3. **Secure Online Shopping**: Enjoy a safe and seamless shopping experience with secure login/sign up to profile.
 
 4. **Community Engagement**: Join our vibrant community of craft enthusiasts to share ideas, experiences, and inspiration, fostering connections and collaboration among like-minded individuals.
 
