@@ -6,7 +6,8 @@ Welcome to the Wood and Jute Craft Store website! Our platform is dedicated to s
 ## Links
 
 [Live Link](https://krafti-a97d7.web.app/)
-[Server Side] (https://vercel.com/nazmul-hassan-nahids-projects/krafti-server)
+
+[Server Side](https://vercel.com/nazmul-hassan-nahids-projects/krafti-server)
 
 
 ## Features
