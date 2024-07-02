@@ -90,9 +90,7 @@ Once the server and client are running, open your web browser and go to `http://
 
 5. **Regular Updates**: Stay informed about new product releases, promotions, and events through our newsletter and social media channels, ensuring you never miss out on the latest offerings.
 
-6. **Responsive Customer Support**: Our dedicated support team is available to assist you with any inquiries, concerns, or feedback, providing prompt and helpful assistance to ensure your satisfaction.
-
-7. **Mobile-Friendly Design**: Access our website seamlessly from any device, including smartphones and tablets, with a responsive design optimized for smooth navigation and functionality on all screen sizes.
+6. **Mobile-Friendly Design**: Access our website seamlessly from any device, including smartphones and tablets, with a responsive design optimized for smooth navigation and functionality on all screen sizes.
 
 
 ## Tech Stack
